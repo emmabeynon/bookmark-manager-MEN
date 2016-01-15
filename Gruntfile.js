@@ -18,11 +18,17 @@ module.exports = function(grunt) {
           configFile: './wdio.conf.js'
         }
       },
+      nodemon: {
+        dev: {
+          script: 'app.js'
+        }
+      },
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-webdriver');
+  grunt.loadNpmTasks('grunt-nodemon');
 
-  grunt.registerTask('default', ['jshint'], ['webdriver']);
+  grunt.registerTask('default', ['jshint'], ['webdriver'], ['nodemon']);
 };

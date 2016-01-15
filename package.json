@@ -18,10 +18,12 @@
   },
   "devDependencies": {
     "chai": "^3.4.1",
+    "database-cleaner": "^0.11.0",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-mocha": "^0.4.15",
+    "grunt-nodemon": "^0.4.1",
     "grunt-webdriver": "^1.0.0",
     "mocha": "^2.3.4",
     "nodemon": "^1.8.1",
