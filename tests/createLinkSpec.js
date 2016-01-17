@@ -4,7 +4,6 @@ var expect = chai.expect;
 var DatabaseCleaner = require('database-cleaner');
 var databaseCleaner = new DatabaseCleaner('mongodb');
 var connect = require('mongodb').connect;
-// var mongoose = require('mongoose');
 
 describe('Create Link', function() {
 	var link;
@@ -21,7 +20,7 @@ describe('Create Link', function() {
 		expect(link.title).to.equal('Test Link');
 	});
 
-	it('should have a title', function() {
+	it('should have a URL', function() {
 		expect(link.url).to.equal('http://www.testlink.com');
 	});
 

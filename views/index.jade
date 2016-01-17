@@ -1,4 +1,18 @@
 extends layout
 
 block content
-  h1 Bookmark Manager
+	h1 Bookmark Manager
+	form(id="create-link", action='/links', method='post')
+		label Title:
+		input(id='link-title', type='text', name='title')
+		br
+		label URL:
+		input(id='link-url', type='text', name='url')
+		br
+		input(id='submit', type='submit', value='submit')
+
+	div#link-list
+	h3 My Links
+	ul
+	each link in links
+		li= link.title +': '+ link.url
